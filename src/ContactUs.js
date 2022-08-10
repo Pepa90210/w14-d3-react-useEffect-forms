@@ -21,8 +21,10 @@ function ContactUs() {
     setPhone("");
   };
 
+  const [theme, setTheme] = useState("light");
+
   return (
-    <div>
+    <div className={`state ${theme}`}>
       <h2>Contact Us</h2>
       <form onSubmit={onSubmit}>
         <div>
@@ -53,6 +55,10 @@ function ContactUs() {
           />
         </div>
         <button>Submit</button>
+        <br />
+        <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+          Toggle Theme
+        </button>
       </form>
     </div>
   );

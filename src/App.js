@@ -1,4 +1,5 @@
 import ContactUs from "./ContactUs";
+import "./index.css";
 
 function App() {
   return <ContactUs />;
